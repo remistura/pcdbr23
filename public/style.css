@@ -1,0 +1,28 @@
+body {
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+#canvas1 {
+  z-index: 1;
+}
+
+#canvas2 {
+  z-index: 0;
+}
+
+#canvas3 {
+  z-index: 2;
+}
