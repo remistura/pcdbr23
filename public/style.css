@@ -15,14 +15,14 @@ canvas {
   background-color: transparent;
 }
 
-#canvas1 {
+#middleCanvas {
   z-index: 1;
 }
 
-#canvas2 {
+#backCanvas {
   z-index: 0;
 }
 
-#canvas3 {
+#frontCanvas {
   z-index: 2;
 }

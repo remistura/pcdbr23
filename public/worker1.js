@@ -29,6 +29,8 @@ onmessage = function (event) {
       postMessage({ msg: "Worker 1 finished" });
       self.close();
       break;
+    default:
+      postMessage({ msg: `Unknown topic: ${topic}` });
   }
 };
 
