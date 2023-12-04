@@ -1,3 +1,4 @@
+import createFinalImage from "./functions/createFinalImage";
 import drawFlower from "./functions/drawFlower";
 import saveImage from "./functions/saveImage";
 
@@ -68,13 +69,16 @@ import saveImage from "./functions/saveImage";
       console.log("[Main] Finished drawing");
       worker1.postMessage({ topic: "finish" });
       worker2.postMessage({ topic: "finish" });
+      createFinalImage(middleCanvas, backCanvas);
+      backCanvas.parentNode.remove();
+      frontCanvas.parentNode.remove();
     }
   }
 
   window.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       console.log("[Main] Saving image");
-      saveImage(middleCanvas, backCanvas);
+      saveImage(middleCanvas);
     }
   });
 
